@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EuroTrends | Latest Trending News in Europe</title>
+<meta name="description" content="EuroTrends delivers the latest breaking and trending news across Europe. Updated hourly with curated stories from trusted sources.">
+<meta name="keywords" content="Europe news, EU trending, breaking news, European politics, Euronews, BBC Europe">
+<meta name="author" content="EuroTrends">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://eurotrends.news/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EuroTrends | Latest Trending News in Europe">
+<meta property="og:description" content="Real-time trending news across the European Union. Politics, economy, culture, and breaking stories updated hourly.">
+<meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='1200' height='630' fill='%23003399'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='64' fill='%23FFCC00'%3EEuroTrends%3C/text%3E%3C/svg%3E">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EuroTrends | Latest Trending News in Europe">
+<meta name="twitter:description" content="Real-time trending news across the European Union. Updated hourly.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "EuroTrends",
+  "url": "https://eurotrends.news/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect width='400' height='400' fill='%23003399'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='48' fill='%23FFCC00'%3EET%3C/text%3E%3C/svg%3E"
+  },
+  "sameAs": []
+}
+</script>
+<style>
+  :root {
+    --primary: #003399;
+    --primary-dark: #002266;
+    --accent: #FFCC00;
+    --text: #1a1a1a;
+    --text-light: #5a5a5a;
+    --bg: #ffffff;
+    --bg-alt: #f5f6f8;
+    --border: #e0e2e6;
+    --danger: #BB1919;
+    --success: #188038;
+    --max-width: 1280px;
+    --radius: 4px;
+    --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  a:hover {
+    color: var(--primary-dark);
+  }
+  h1, h2, h3, h4 {
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--text);
+  }
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+  p { margin-bottom: 1rem; }
+  .container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9375rem;
+    white-space: nowrap;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: #fff;
+  }
+  .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: var(--radius);
+    background: var(--danger);
+    color: #fff;
+  }
+  .badge-trending {
+    background: var(--accent);
+    color: var(--text);
+  }
+  .badge-eu {
+    background: var(--primary);
+    color: #fff;
+  }
+
+  /* Header */
+  .header {
+    background: var(--bg);
+    border-bottom: 3px solid var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+  }
+  .header-top {
+    background: var(--primary);
+    color: #fff;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+  }
+  .header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-date {
+    opacity: 0.9;
+  }
+  .header-main {
+    padding: 1rem 0;
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: var(--primary);
+  }
+  .logo svg {
+    width: 40px;
+    height: 40px;
+  }
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .nav a {
+    font-weight: 600;
+    color: var(--text);
+    position: relative;
+    padding: 0.25rem 0;
+  }
+  .nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: var(--transition);
+  }
+  .nav a:hover::after, .nav a.active::after {
+    width: 100%;
+  }
+  .mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  .mobile-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--text);
+    margin: 5px 0;
+    transition: var(--transition);
+  }
+
+  /* Breaking Bar */
+  .breaking-bar {
+    background: var(--danger);
+    color: #fff;
+    padding: 0.625rem 0;
+    overflow: hidden;
+  }
+  .breaking-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .breaking-label {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+  .breaking-text {
+    white-space: nowrap;
+    animation: scroll-left 30s linear infinite;
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Hero */
+  .hero {
+    padding: 2rem 0;
+    background: var(--bg-alt);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+  .hero-main {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: #000;
+    min-height: 450px;
+  }
+  .hero-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: var(--transition);
+  }
+  .hero-main:hover img {
+    transform: scale(1.02);
+    opacity: 0.75;
+  }
+  .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+    color: #fff;
+  }
+  .hero-content h1 {
+    color: #fff;
+    margin: 0.75rem 0;
+    font-size: 2rem;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+  .hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .hero-card {
+    display: flex;
+    gap: 1rem;
+    background: var(--bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  .hero-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  .hero-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .hero-card-content {
+    padding: 1rem 1rem 1rem 0;
+  }
+  .hero-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Ad Slot */
+  .ad-slot {
+    background: var(--bg-alt);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .ad-label {
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+  }
+  .ad-content {
+    font-weight: 600;
+    color: var(--text-light);
+  }
+
+  /* Main Content */
+  .main-content {
+    padding: 3rem 0;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--primary);
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-title::before {
+    content: '';
+    width: 4px;
+    height: 28px;
+    background: var(--accent);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .card {
+    background: var(--bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .card-img {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  .card:hover .card-img img {
+    transform: scale(1.05);
+  }
+  .card-badge {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+  .card-body {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8125rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  .card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+  }
+  .card-excerpt {
+    color: var(--text-light);
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+  .card-footer {
+    margin-top: auto;
+  }
+
+  /* Article Template */
+  .article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  .article-header {
+    margin-bottom: 2rem;
+  }
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: var(--text-light);
+    font-size: 0.875rem;
+    margin: 1rem 0;
+  }
+  .article-img {
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-lg);
+  }
+  .article-body {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  .article-body h2 {
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+  }
+  .article-body blockquote {
+    border-left: 4px solid var(--accent);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: var(--text-light);
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--primary-dark);
+    color: #fff;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .footer h4 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .footer ul {
+    list-style: none;
+  }
+  .footer li {
+    margin-bottom: 0.5rem;
+  }
+  .footer a {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9375rem;
+  }
+  .footer a:hover {
+    color: var(--accent);
+  }
+  .footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 768px) {
+    html { font-size: 15px; }
+    .nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--bg);
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: var(--shadow-lg);
+      border-top: 1px solid var(--border);
+    }
+    .nav.active { display: flex; }
+    .mobile-toggle { display: block; }
+    .hero-content h1 { font-size: 1.5rem; }
+    .hero-content { padding: 1.25rem; }
+    .grid { grid-template-columns: 1fr; }
+    .hero-card { flex-direction: column; }
+    .hero-card img { width: 100%; height: 200px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .header-top .container { justify-content: center; }
+  }
+  @media (max-width: 390px) {
+    .container { padding: 0 0.75rem; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    .logo { font-size: 1.5rem; }
+    .card-body { padding: 1rem; }
+  }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-top">
+    <div class="container">
+      <div class="header-date" id="currentDate">Loading...</div>
+      <div>EU Breaking News • Updated Hourly</div>
+    </div>
+  </div>
+  <div class="header-main">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#003399"/>
+          <path d="M12 2L14.5 9H21L16 13L18 20L12 16L6 20L8 13L3 9H9.5L12 2Z" fill="#FFCC00"/>
+        </svg>
+        EuroTrends
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="#" class="active">Home</a>
+        <a href="#trending">Trending in EU</a>
+        <a href="#politics">Politics</a>
+        <a href="#economy">Economy</a>
+        <a href="#culture">Culture</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="breaking-bar">
+  <div class="container breaking-inner">
+    <div class="breaking-label">Breaking</div>
+    <div class="breaking-text">European Commission announces new digital regulation framework • Eurozone inflation drops to 2.1% • France and Germany agree on joint defence initiative • EU Parliament votes on AI Act amendments today</div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <article class="hero-main">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450'%3E%3Cdefs%3E%3ClinearGradient id='eu' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23003399;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23002266;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='url(%23eu)'/%3E%3Ccircle cx='400' cy='225' r='100' fill='none' stroke='%23FFCC00' stroke-width='8'/%3E%3Cg fill='%23FFCC00'%3E%3Ccircle cx='400' cy='125' r='10'/%3E%3Ccircle cx='485' cy='155' r='10'/%3E%3Ccircle cx='520' cy='225' r='10'/%3E%3Ccircle cx='485' cy='295' r='10'/%3E%3Ccircle cx='400' cy='325' r='10'/%3E%3Ccircle cx='315' cy='295' r='10'/%3E%3Ccircle cx='280' cy='225' r='10'/%3E%3Ccircle cx='315' cy='155' r='10'/%3E%3C/g%3E%3C/svg%3E" alt="European Union Flag" loading="eager">
+        <div class="hero-content">
+          <span class="badge badge-eu">EU Policy</span>
+          <h1>European Parliament Passes Landmark Digital Services Act Reform</h1>
+          <div class="hero-meta">
+            <span>By Anna Schmidt</span>
+            <span>2 hours ago</span>
+            <span>Brussels</span>
+          </div>
+        </div>
+      </article>
+      <div class="hero-side">
+        <article class="hero-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%231EB980'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='40' fill='white'%3E%E2%82%AC%3C/text%3E%3C/svg%3E" alt="Euro currency" loading="lazy">
+          <div class="hero-card-content">
+            <span class="badge badge-trending">Trending</span>
+            <h3>Eurozone Growth Exceeds Forecasts in Q3 2025</h3>
+          </div>
+        </article>
+        <article class="hero-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%23BB1919'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='50' fill='white'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" alt="Energy icon" loading="lazy">
+          <div class="hero-card-content">
+            <span class="badge">Breaking</span>
+            <h3>EU Energy Ministers Reach Gas Price Cap Agreement</h3>
+          </div>
+        </article>
+        <article class="hero-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%23003399'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='50' fill='white'%3E%E2%9C%88%3C/text%3E%3C/svg%3E" alt="Travel icon" loading="lazy">
+          <div class="hero-card-content">
+            <span class="badge badge-eu">European</span>
+            <h3>New EU-Wide Rail Pass Launched for Sustainable Travel</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="ad-slot" id="adSlot1">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-content" id="adContent1">AdSense Slot 1 - 728x90</div>
+  </div>
+</div>
+
+<main class="main-content" id="trending">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Trending in Europe</h2>
+      <a href="#" class="btn btn-primary">View All</a>
+    </div>
+    <div class="grid" id="newsGrid">
+      <!-- Articles populated by JS -->
+    </div>
+  </div>
+</main>
+
+<div class="container">
+  <div class="ad-slot" id="adSlot2">
+    <div class="ad-label">Advertisement</div>
+    <div class="ad-content" id="adContent2">AdSense Slot 2 - 300x250</div>
+  </div>
+</div>
+
+<section class="container" id="featured-article">
+  <div class="article">
+    <div class="article-header">
+      <span class="badge badge-eu">EU Feature</span>
+      <h1>How the European Green Deal is Reshaping Industry Across the Continent</h1>
+      <div class="article-meta">
+        <span>By Marcus Weber</span>
+        <span>October 5, 2025</span>
+        <span>8 min read</span>
+        <span>Updated 1 hour ago</span>
+      </div>
+    </div>
+    <div class="article-img">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='green' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%231EB980;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2314A065;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23green)'/%3E%3Cpath d='M0 300 L200 200 L400 280 L600 180 L800 240 L800 400 L0 400 Z' fill='%23FFFFFF' opacity='0.2'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='32' fill='white'%3EGreen Deal Initiative%3C/text%3E%3C/svg%3E" alt="European Green Deal" loading="lazy">
+    </div>
+    <div class="article-body">
+      <p>The European Green Deal, first presented in December 2019, has evolved from an ambitious climate policy framework into the primary driver of industrial transformation across all 27 EU member states. As 2025 progresses, the tangible effects of this comprehensive strategy are becoming increasingly visible in manufacturing, energy production, and transportation sectors throughout Europe.</p>
+      
+      <h2>Industrial Transformation Underway</h2>
+      <p>According to the latest data from Eurostat, renewable energy now accounts for 44% of the EU's electricity production, up from 34% in 2020. This dramatic shift has been supported by €1.8 trillion in sustainable investments mobilized through the Green Deal Investment Plan. Major European manufacturers, including those in Germany's automotive sector and Scandinavia's heavy industry, have committed to carbon-neutral production timelines that align with the EU's 2050 climate neutrality goal.</p>
+      
+      <p>“What we're witnessing is not just policy, but a fundamental re-engineering of European industry,” explains Dr. Elena Kowalski, Director of Climate Economics at the European Policy Centre. “The combination of regulatory certainty, public investment, and private sector innovation has created unprecedented momentum toward sustainability.”</p>
+      
+      <blockquote>The European Green Deal has proven that ambitious climate action and economic growth are not mutually exclusive. We're seeing green innovation become Europe's competitive advantage globally. — Frans Timmermans, Executive Vice-President, European Commission</blockquote>
+      
+      <h2>Economic Impact and Job Creation</h2>
+      <p>The European Commission estimates that the Green Deal will create over 1 million additional jobs by 2030, primarily in renewable energy, sustainable construction, and green technology sectors. Countries like Denmark and Portugal have already become net exporters of renewable energy technology, while regions historically dependent on coal, such as Silesia in Poland, are successfully transitioning through the Just Transition Fund.</p>
+      
+      <p>However, challenges remain. Energy-intensive industries continue to express concerns about global competitiveness, and the pace of building renovation must accelerate to meet the Renovation Wave targets. The Commission has responded with the Carbon Border Adjustment Mechanism, which began its transitional phase in October 2023, leveling the playing field for EU producers competing with imports from regions with less stringent climate policies.</p>
+      
+      <h2>Looking Ahead: Fit for 55 Package</h2>
+      <p>The legislative backbone of the Green Deal, the "Fit for 55" package, aims to reduce net greenhouse gas emissions by at least 55% by 2030 compared to 1990 levels. Key measures include the expansion of the EU Emissions Trading System to buildings and road transport, stricter CO2 standards for vehicles, and a revised Energy Taxation Directive. As European citizens increasingly prioritize climate action, with 93% of Europeans considering climate change a serious problem according to the latest Eurobarometer survey, the Green Deal continues to shape not just policy but the future trajectory of the European economy and society.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>EuroTrends</h4>
+        <p style="color: rgba(255,255,255,0.8); font-size: 0.9375rem;">Your trusted source for breaking and trending news across the European Union. Updated hourly with verified reporting.</p>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#politics">EU Politics</a></li>
+          <li><a href="#economy">Economy</a></li>
+          <li><a href="#culture">Culture</a></li>
+          <li><a href="#tech">Technology</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Ad Choices</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 EuroTrends. All rights reserved. Content aggregated from public RSS feeds and rewritten. Not affiliated with BBC or Euronews.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- 
+GITHUB ACTIONS WORKFLOW FOR AUTO-POSTING TRENDING EU NEWS
+File: .github/workflows/news-update.yml
+
+name: Update Trending EU News Hourly
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  workflow_dispatch:     # Allows manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install rss-parser node-fetch@2 cheerio
+
+      - name: Fetch and filter trending EU news
+        run: node scripts/update-news.js
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'News Bot'
+          git config --global user.email 'bot@eurotrends.news'
+          git add data/news.json
+          git diff --staged --quiet || git commit -m "Auto-update: Trending EU news $(date -u +"%Y-%m-%d %H:%M UTC")"
+          git push
+
+FILE: scripts/update-news.js
+This script fetches Euronews and BBC RSS, filters for keywords, rewrites content, and updates news.json
+
+const Parser = require('rss-parser');
+const fs = require('fs');
+const fetch = require('node-fetch');
+const parser = new Parser();
+const KEYWORDS = ['breaking', 'trending', 'EU', 'European', 'Europe', 'Brussels', 'Eurozone'];
+const RSS_FEEDS = [
+  'https://www.euronews.com/rss?level=theme&name=news',
+  'https://feeds.bbci.co.uk/news/world/europe/rss.xml'
+];
+
+async function rewriteContent(text) {
+  // Basic rewrite logic - replace with OpenAI API for production
+  // For demo: simple summarization and EU-focused rephrasing
+  return text.replace(/BBC|Euronews/gi, 'sources report')
+             .replace(/\s+/g, ' ')
+             .trim()
+             .substring(0, 280) + '...';
+}
+
+async function fetchAndProcess() {
+  let allItems = [];
+  for (const feed of RSS_FEEDS) {
+    try {
+      const data = await parser.parseURL(feed);
+      const filtered = data.items.filter(item => {
+        const content = (item.title + ' ' + item.contentSnippet).toLowerCase();
+        return KEYWORDS.some(kw => content.includes(kw.toLowerCase()));
+      });
+      allItems = allItems.concat(filtered.map(item => ({
+        title: item.title,
+        link: item.link,
+        pubDate: item.pubDate,
+        source: data.title,
+        content: item.contentSnippet || item.content || ''
+      })));
+    } catch (e) {
+      console.error(`Error fetching ${feed}:`, e.message);
+    }
+  }
+  
+  // Dedupe, sort by date, take top 9
+  const unique = allItems.filter((item, index, self) =>
+    index === self.findIndex(t => t.title === item.title)
+  ).sort((a,b) => new Date(b.pubDate) - new Date(a.pubDate)).slice(0, 9);
+
+  // Rewrite content for each item
+  for (let item of unique) {
+    item.excerpt = await rewriteContent(item.content);
+    item.category = 'EU News';
+    item.image = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%23003399'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20' fill='%23FFCC00'%3EEuroTrends%3C/text%3E%3C/svg%3E`;
+    delete item.content;
+  }
+
+  fs.writeFileSync('data/news.json', JSON.stringify({
+    updated: new Date().toISOString(),
+    articles: unique
+  }, null, 2));
+  console.log(`Updated news.json with ${unique.length} articles`);
+}
+
+fetchAndProcess();
+
+END GITHUB ACTIONS SETUP
+-->
+
+<script>
+  // Set current date
+  document.getElementById('currentDate').textContent = new Date().toLocaleDateString('en-GB', {
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+  });
+
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mainNav = document.getElementById('mainNav');
+  mobileToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+
+  // Sample trending EU news data - replaced by news.json in production
+  const trendingNews = [
+    {
+      title: "EU Leaders Summit in Brussels Focuses on Defense Integration",
+      excerpt: "Heads of state from 27 member nations convene to discuss new joint military procurement and strategic autonomy framework amid global tensions.",
+      category: "Politics",
+      badge: "Breaking",
+      time: "45 min ago",
+      location: "Brussels",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%23BB1919'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EEU Summit%3C/text%3E%3C/svg%3E"
+    },
+    {
+      title: "European Central Bank Holds Interest Rates Steady at 3.25%",
+      excerpt: "ECB President signals cautious approach as Eurozone inflation stabilizes near 2% target, ending 18-month tightening cycle.",
+      category: "Economy",
+      badge: "Trending",
+      time: "2 hours ago",
+      location: "Frankfurt",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%231EB980'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EECB Decision%3C/text%3E%3C/svg%3E"
+    },
+    {
+      title: "France Announces €30B Investment in Mediterranean Hydrogen Hub",
+      excerpt: "Landmark project in Marseille aims to make Europe global leader in green hydrogen production, creating 15,000 jobs by 2030.",
+      category: "Energy",
+      badge: "European",
+      time: "3 hours ago",
+      location: "Paris",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%2300A8E8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EGreen Hydrogen%3C/text%3E%3C/svg%3E"
+    },
+    {
+      title: "New EU Digital Identity Wallet Rolls Out Across 12 Countries",
+      excerpt: "Citizens can now store official documents and access public services digitally. Full EU coverage expected by Q2 2026.",
+      category: "Tech",
+      badge: "Trending",
+      time: "5 hours ago",
+      location: "Tallinn",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%236633CC'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EDigital ID%3C/text%3E%3C/svg%3E"
+    },
+    {
+      title: "Italian PM Calls for Reform of EU Migration Pact",
+      excerpt: "Rome proposes new burden-sharing mechanism as Mediterranean arrivals increase 40% year-over-year. Germany signals openness to talks.",
+      category: "Politics",
+      badge: "Breaking",
+      time: "6 hours ago",
+      location: "Rome",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%23FF6B00'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EMigration Policy%3C/text%3E%3C/svg%3E"
+    },
+    {
+      title: "Nordic Countries Lead EU in Digital Skills Rankings",
+      excerpt: "Finland, Sweden, and Denmark top DESI index as Europe pushes for 80% basic digital skills among adults by 2030.",
+      category: "Society",
+      badge: "European",
+      time: "8 hours ago",
+      location: "Helsinki",
+      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='225'%3E%3Crect width='400' height='225' fill='%23003399'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='24' fill='white'%3EDigital Skills%3C/text%3E%3C/svg%3E"
+    }
+  ];
+
+  // Render news grid
+  function renderNews() {
+    const grid = document.getElementById('newsGrid');
+    grid.innerHTML = trendingNews.map(article => `
+      <article class="card">
+        <div class="card-img">
+          <img src="${article.image}" alt="${article.title}" loading="lazy">
+          <span class="card-badge badge ${article.badge === 'Trending' ? 'badge-trending' : article.badge === 'European' ? 'badge-eu' : ''}">${article.badge}</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span>${article.category}</span>
+            <span>•</span>
+            <span>${article.time}</span>
+          </div>
+          <h3>${article.title}</h3>
+          <p class="card-excerpt">${article.excerpt}</p>
+          <div class="card-footer">
+            <a href="#featured-article" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+  renderNews();
+
+  // AdSense auto-refresh every 60 seconds
+  const adSlots = [
+    { id: 'adContent1', content: ['AdSense Slot 1 - 728x90', 'European Travel Deals - Book Now', 'EU Business Solutions'] },
+    { id: 'adContent2', content: ['AdSense Slot 2 - 300x250', 'Learn a European Language', 'Invest in Green Energy'] }
+  ];
+  let adIndex = 0;
+  
+  function refreshAds() {
+    adSlots.forEach(slot => {
+      const el = document.getElementById(slot.id);
+      if (el) {
+        el.style.opacity = '0';
+        setTimeout(() => {
+          el.textContent = slot.content[adIndex % slot.content.length];
+          el.style.opacity = '1';
+        }, 300);
+      }
+    });
+    adIndex++;
+  }
+  
+  // Initial delay then refresh every 60s
+  setInterval(refreshAds, 60000);
+  
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        mainNav.classList.remove('active');
+      }
+    });
+  });
+
+  // In production, fetch news.json generated by GitHub Actions
+  // fetch('data/news.json').then(r => r.json()).then(data => { trendingNews = data.articles; renderNews(); });
+</script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script></body>
+</html>
